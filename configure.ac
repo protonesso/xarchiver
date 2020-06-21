@@ -89,7 +89,6 @@ dnl *** i18n support ***
 dnl ********************
 IT_PROG_INTLTOOL([0.40.0], [no-xml])
 xgversion="`xgettext --version | head -1 | grep -o '[[0-9.]]\+$'`"
-AS_IF([test x"$xgversion" \< x"0.16"], AC_MSG_ERROR([GNU gettext tools must be at least version 0.16]))
 GETTEXT_PACKAGE=m4_default([], [AC_PACKAGE_NAME])
 AC_SUBST([GETTEXT_PACKAGE])
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"], [Name of default gettext domain])
